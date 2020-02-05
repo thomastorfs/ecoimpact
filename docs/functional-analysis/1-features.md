@@ -25,8 +25,8 @@ We will currently only focus on searching and adding information. The way this i
 
 ```
 Feature: Look up information about a physical product
-    As a consumer who needs to know the ecological footprint of a physical product
-    I want to look up information about it
+    As a consumer  
+    I want to look know the ecological footprint of a physical product  
     So that I can decide whether to buy it or not, or buy an alternative
     
 
@@ -35,8 +35,8 @@ Feature: Look up information about a physical product
         Given I am an anonymous or authenticated user
 
     Scenario: Looking up information about product A
-        Given product A exists in the application
-        When I look up product A
+        Given product A exists in the application  
+        When I look up product A  
         Then I see information about product A
         And I see resource A
         And I see footprint A
@@ -61,8 +61,8 @@ Feature: Look up information about a physical product
 
 ```
 Feature: Receive recommendations about physical products
-    As a consumer who would like to receive recommendations about a physical product
-    I want to look up information about it
+    As a consumer
+    I want to receive recommendations about a physical product
     So that I can become aware about the alternatives and improve my ecological footprint
 
     # For anonymous users and authenticated users
@@ -91,8 +91,8 @@ Feature: Receive recommendations about physical products
 
 ```
 Feature: Calculate my ecological footprint
-    As a consumer who would like to become aware of my ecological footprint
-    I want to calculate it
+    As a registered consumer
+    I would like to calculate my ecological footprint
     So that I can become aware about my impact and the urgency of taking measures
     
 
@@ -114,9 +114,9 @@ Feature: Calculate my ecological footprint
 
 ```
 Feature: Add a physical product
-  As a consumer who wants to add a product with all relevant information
-  I want to add data about the product
-  So everyone else who uses the system can use this information as well
+    As a registered consumer
+    I want to add data about a physical product
+    So everyone else who uses the system can use this information as well
   
  
     # For anonymous users
@@ -162,25 +162,14 @@ Feature: Add a physical product
 
 ```
 Feature: Add a resource
-    As a consumer who wants to add a resource from which a product is made
+    As an administrator
     I want to add data about the resource
     So everyone else who uses the system can use this information as well
 
 
-    # For anonymous users
+    # For administrators that have been authenticated
     Background:
-        Given I am an anonymous user
-
-    Scenario: Adding resource A
-        Given I am not logged in
-        When I want to add resource A
-        Then I see a message explaining I need to login
-        And I see a way to login
-
-
-    # For users that have been authenticated
-    Background:
-        Given I have logged into my account
+        Given I have logged into my administrator account
 
     Scenario: Adding non-existing resource A
         Given resource A does not exist
@@ -196,3 +185,23 @@ Feature: Add a resource
 
 ```
 
+
+
+## Feature: Link a resource
+
+```
+Feature: Link a resource
+    As a registered consumer or administrator
+    I want to be able to link resources to physical products  
+    So that the ecological footprint can be calculated by the sum of its parts
+
+    # For registered consumers and administrators that have been authenticated
+    Background:
+        Given I have logged into my account
+
+    Scenario: Linking resource A to product A
+        Given resource A and product A exist
+        When I want to link resource A to product A
+        Then I can add resource A when adding or editing product A
+        And I can save product A
+```

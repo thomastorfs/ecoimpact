@@ -20,7 +20,7 @@ This project will start by building and visualizing a small database of physical
 
 1. **Business analysis**
    1. [Use-cases](docs/business-analysis/1-use-cases.md)
-   2. TODO User stories
+   2. [User stories](docs/business-analysis/2-user-stories.md)
    3. TODO Product backlog
 2. **Functional analysis**
    1. [Features (BDD)](docs/functional-analysis/1-features.md) 

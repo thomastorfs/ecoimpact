@@ -1,42 +1,42 @@
 # User stories
 
-## Anonymous visitors
+## Consumer
 
 ```
-As an anonymous visitor  
-I want to look up information about a physical product  
-So that I can become aware about it's ecological impact
+As a consumer
+I want to look know the ecological footprint of a physical product
+So that I can decide whether to buy it or not, or buy an alternative
 ```
 
 ```
-As an anonymous visitor  
-I want to look up recommended products based on a physical product    
-So that I can make more ecological choices when purchasing a product in the future
+As a consumer
+I want to receive recommendations about a physical product
+So that I can become aware about the alternatives and improve my ecological footprint
 ```
 
 
-## Registered users
+## Registered consumer
 
 ```
-As a registered user  
+As a registered consumer  
 I want to add a physical product to my personal products list  
 So that I can make use of more personalized functionalities
 ```
 
 ```
-As a registered user
-I want to calculate my ecological footprint  
-So that I can become aware about the urgency when I need to act
+As a registered consumer
+I would like to calculate my ecological footprint
+So that I can become aware about my impact and the urgency of taking measures
 ```
 
 ```
-As a registered user  
-I want to add a physical product to the application  
-So that all application users can make use of its data
+As a registered consumer
+I want to add data about a physical product
+So everyone else who uses the system can use this information as well
 ```
 
 ```
-As a registered user  
+As a registered consumer  
 I want to be able to link resources to physical products  
 So that the ecological footprint can be calculated by the sum of its parts
 ```
@@ -45,7 +45,7 @@ So that the ecological footprint can be calculated by the sum of its parts
 ## Administrators
 
 ```
-As an administrator  
-I want to be able to add resources for physical products  
-So that they can be linked to physical products
+As an administrator
+I want to add data about the resource
+So everyone else who uses the system can use this information as well
 ```
